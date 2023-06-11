@@ -2,6 +2,8 @@ const product = document.querySelectorAll('.product');
 
 const products = document.querySelectorAll('.product');
 
+const productBtn = document.querySelector('.product__btn')
+
 if (products) {
 	products.forEach(el => {
 		let currentProduct = el;
@@ -21,6 +23,12 @@ if (products) {
 					currentProduct.querySelector(`.image-pagination__item[data-index="0"]`).classList.add('image-pagination__item--active');
 				});
 			});
-		}
+		};
 	});
-}
+};
+
+
+productBtn.addEventListener('click',(e) => {
+
+	alert("Товар добавлен в корзину")
+})
